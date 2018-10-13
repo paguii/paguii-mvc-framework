@@ -1,4 +1,4 @@
-<?php require_once($path->pathViews."layout/head.php"); ?>
+<?php require_once($this->config->pathViews."layout/head.php"); ?>
 <body>
     <div id="topo">
         MVC Framework - PaGuii

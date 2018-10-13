@@ -1,12 +1,14 @@
 <?php
 
 class View{
-    function __construct(){
+    
+    protected $config;
 
+    function __construct(){
+        $this->config = new Configuration();
     }
 
-    public function render($name){
-        $path = new Path();
-        require_once($path->pathViews.$name.".php");
+    public function render($name){        
+        require_once($this->config->pathViews.$name.".php");
     }
 }

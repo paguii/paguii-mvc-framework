@@ -2,8 +2,10 @@
 
 class Bootstrap{
 
+    protected $config;
+
     function __construct(){
-        $path = new Path();
+        $this->config = new Configuration();
 
         $url = $_GET['url'];
         $url = rtrim($url, "/");
@@ -13,7 +15,7 @@ class Bootstrap{
             $url[0] = "index";
         }
 
-        $file = $path->pathControllers . $url[0] . '.php';
+        $file = $this->config->pathControllers . $url[0] . '.php';
 
         if(file_exists($file)){
             require_once($file);
@@ -54,10 +56,8 @@ class Bootstrap{
         }
     }
 
-    public function error($id){
-        $path = new Path();
-
-        require_once($path->pathControllers."erro.php");
+    public function error($id){        
+        require_once($this->config->pathControllers."erro.php");
         $controller = new Erro($id);
     }
 }
