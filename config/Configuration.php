@@ -20,9 +20,9 @@ class Configuration {
         $this->pathControllers = "mvc/controllers/";
 
         #Define configuração de banco
-        $this->dbhost = "#####";
-        $this->dbname = "#####";
-        $this->dbuser = "#####";
-        $this->dbpwd = "#####";
+        $this->dbhost = "";
+        $this->dbname = "";
+        $this->dbuser = "";
+        $this->dbpwd = "";
     }
 }

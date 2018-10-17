@@ -8,6 +8,7 @@ class Index extends Controller{
     public function index($arg = false){    
         $exemplo = new ExemploModel();
         $exemplo->exemplo();
+        
         $this->view->render("index/index");
     }
 }
